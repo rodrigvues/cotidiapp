@@ -9,39 +9,62 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: appBar(),
       backgroundColor: Colors.grey[850],
-      body: Container(
-        margin: const EdgeInsets.all(20),
-          child: Padding(
-            padding: const EdgeInsets.only(left: 20, top: 40),
-            child: Text(
-              'Olá, ',
-
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 35,
-
-                fontWeight: FontWeight.w700,
+      body: Column(
+        children: [
+          Container(
+            margin: const EdgeInsets.all(20),
+            child: Padding(
+              padding: const EdgeInsets.only(left: 20, top: 40),
+              child: Text(
+                'Olá, ',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 35,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
             ),
           ),
-
+          Container(
+            child: Text(
+              'Olá, ',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 35,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+          )
+        ],
       ),
     );
   }
 
   AppBar appBar() {
     return AppBar(
-      title: const Text(
-        'CotidiApp',
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 18,
-          fontWeight: FontWeight.bold,
+      title: Padding(
+        padding: const EdgeInsets.only(left: 20, right: 20.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'CotidiApp',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Icon(
+              Icons.notifications,
+              color: Colors.white,
+              size: 22.0,
+            )
+          ],
         ),
       ),
       backgroundColor: Colors.grey[850],
       elevation: 0.0,
-      centerTitle: true,
     );
   }
 }
